@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Browser extensions manager UI</title>
   <link rel="stylesheet" href="styles.css"> 
+  <title>Frontend Mentor | Browser extensions manager UI</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -15,8 +13,10 @@
 </head>
 <body>
   <header>
-    <img src="./assets/images/logo.svg" alt="Browser Extensions Manager Logo">
-    <button class="toggle-theme" id="toggle-theme-button"><img src="./assets/images/icon-moon.svg" alt="Toggle theme"></button>
+    <div class="logo">
+      <img class="extensions-logo" src="./assets/images/logo.svg" alt="Browser Extensions Manager Logo">
+      <button class="toggle-theme" id="toggle-theme-button"><img class="button-toggle" src="./assets/images/icon-moon.svg" alt="Toggle theme"></button>
+    </div>
   </header>
   <main>
     <section class="extensions-list">
