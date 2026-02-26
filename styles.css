@@ -49,7 +49,7 @@ body {
 
 /* Mobile Dark Theme */
 .dark-theme {
-    background-color: var(--neutral-900);
+    background-color: var(--neutral-800);
     color: var(--neutral-0);
 }
 

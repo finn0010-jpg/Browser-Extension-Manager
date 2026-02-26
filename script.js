@@ -1,13 +1,15 @@
 // Toggle Dark and Light Theme 
 
-const bodyElement = document.querySelector('body');
+const bodyElement = document.body;
 const toggleButton = document.getElementById('toggle-theme');
-const divElements = document.querySelectorAll('div');
-const sectionElemenets = document.querySelectorAll('section');
+const extensionSection = document.getElementById('extensions');
+const mainDiv = extensionSection.querySelectorAll('div');
+const mainElement = document.main;
 
 
-toggleButton.addEventListener('click', () => {
-    bodyElement.classList.toggle('dark-theme');
-    divElements.forEach(div => div.classList.toggle('dark-card'));
-    sectionElemenets.forEach(section => section.classList.toggle('dark-section'));
-});
+function toggleTheme() {
+  bodyElement.classList.toggle('dark-theme');
+  mainDiv.forEach(div => div.classList.toggle('dark-card'));
+}
+
+toggleButton.addEventListener('click', toggleTheme);
