@@ -15,7 +15,7 @@
   <header>
     <div class="logo">
       <img class="extensions-logo" src="./assets/images/logo.svg" alt="Browser Extensions Manager Logo">
-      <button class="toggle-theme" id="toggle-theme-button"><img class="button-toggle" src="./assets/images/icon-moon.svg" alt="Toggle theme"></button>
+      <button class="toggle-theme" id="toggle-theme"><img class="button-toggle" src="./assets/images/icon-moon.svg" alt="Toggle theme"></button>
     </div>
   </header>
   <main>
@@ -28,7 +28,7 @@
       </div>
     </section>
     <section class="extensions">
-      <div class="devlens card">
+      <div class="devlens card" >
         <div class="card-top">
           <img src="./assets/images/logo-devlens.svg" alt="DevLens Logo">
           <div class="card-text">
@@ -38,8 +38,8 @@
         </div>
         <div class="card-bottom">
           <button class="remove-button">Remove</button>
-          <label class="switch">
-            <input type="checkbox">
+          <label for="checkbox" class="switch">
+            <input name="checkbox" id="checkbox" type="checkbox">
             <span class="slider round"></span>
           </label>
         </div>
