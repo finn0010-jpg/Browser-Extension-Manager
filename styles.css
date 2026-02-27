@@ -38,6 +38,12 @@
     --page-bg: var(--neutral-200);
     --text-color: var(--neutral-900);
     --button-bg: var(--neutral-100);
+
+    /* Switch Dimensions */
+    --width-of-switch: 2rem;
+    --height-of-switch: 1rem;
+    --size-of-icon: 0.8rem;
+    --slider-offset: 1.1rem;
 }
 
 /* Mobile light theme */
@@ -190,10 +196,63 @@ h1 {
     border: 1px solid var(--neutral-300);
     padding: 0.5rem 1rem;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .remove-button.dark-button {
     background-color: var(--neutral-700);
     color: var(--neutral-0);
     border: 1px solid var(--neutral-600);
+}
+
+.remove-button:hover {
+    scale: 1.1;
+    transition: 0.3s ease;
+}
+
+/* Slider Toggle Switch */
+.switch input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.switch {
+    display: block;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--red-700);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1em);
+    width: var(--size-of-icon, 1em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--neutral-0); 
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: var(--neutral-300);
+}
+
+input:checked + .slider::before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)))
 }

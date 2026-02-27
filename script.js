@@ -36,16 +36,3 @@ function toggleButtonIcon() {
 toggleButton.addEventListener('click', toggleTheme);
 toggleButton.addEventListener('click', toggleButtonIcon);
 // Filter Buttons 
-
-for (let i = 0; i < filterButtons.length; i++) {
-    filterButtons[i].addEventListener("click", function() {
-        // Find the currently active button and remove the 'active' class
-        const currentActive = document.getElementsByClassName("active");
-        if (currentActive.length > 0) {
-            currentActive[0].classList.remove("active");
-        }
-
-        // Add the 'active' class to the clicked button
-        this.classList.add("active");
-    });
-}
