@@ -32,19 +32,32 @@
     --fw-500: 500;
     --fw-700: 700;
     --fs-p: 16px;
+
+    /* Theme Colors */
+    --card-bg: var(--neutral-0);
+    --page-bg: var(--neutral-200);
+    --text-color: var(--neutral-900);
+    --button-bg: var(--neutral-100);
 }
 
 /* Mobile light theme */
 
 body {
     font-family: var(--font-noto);
-    background-color: var(--neutral-200);
-    color: var(--neutral-900);
+    background-color: var(--page-bg);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+body.dark-theme {
+    --card-bg: var(--neutral-700);
+    --page-bg: var(--neutral-900);
+    --text-color: var(--neutral-0);
+    --button-bg: var(--neutral-600);
 }
 
 /* Mobile Dark Theme */
@@ -59,6 +72,11 @@ body {
 }
 
 
+.dark-button {
+    background-color: var(--neutral-700);
+    color: var(--neutral-0);
+}
+
 
 main {
     max-width: 600px;
@@ -72,7 +90,8 @@ main {
 
 .logo {
     gap: 0.5rem;
-    background-color: var(--neutral-0);
+    background-color: var(--card-bg);
+    color: var(--text-color);
     margin-top: 1rem;
     padding: 0.3rem;
     border-radius: 10px;
@@ -83,6 +102,8 @@ main {
 
 .logo button {
     cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--text-color);
     border: none;
     padding: 0.4rem;
     border-radius: 10px;
@@ -91,10 +112,12 @@ main {
 
 .extensions-logo {
     scale: 0.9;
+    color: var(--text-color);
 }
 
 .button-toggle {
     scale: 0.7;
+    background-image: url("icon-moon.svg");
 }
 
 h1 {
@@ -104,9 +127,9 @@ h1 {
 }
 
 .filter-buttons button {
-    background-color: var(--neutral-0);
+    background-color: var(--card-bg);
     border: none;
-    color: var(--neutral-900);
+    color: var(--text-color);
     font-size: var(--fs-p);
     font-weight: var(--fw-500);
     margin-bottom: 1rem;
@@ -117,12 +140,13 @@ h1 {
     font-weight: var(--fw-500);
 }
 
-.filter-buttons button.selected {
+.selected {
     background-color: var(--red-700);
+    color: var(--neutral-0);
 }
 
 .card {
-    background-color: var(--neutral-0);
+    background-color: var(--card-bg);
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -158,4 +182,18 @@ h1 {
 
 .extensions img {
     margin-bottom: auto;
+}
+
+.remove-button {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+    border: 1px solid var(--neutral-300);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+.remove-button.dark-button {
+    background-color: var(--neutral-700);
+    color: var(--neutral-0);
+    border: 1px solid var(--neutral-600);
 }
