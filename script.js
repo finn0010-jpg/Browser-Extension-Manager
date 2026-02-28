@@ -33,6 +33,11 @@ function toggleButtonIcon() {
     }
 }
 
+function toggleLogo() {
+    const logo = document.getElementsByClassName('extensions-logo');
+    
+}
+
 toggleButton.addEventListener('click', toggleTheme);
 toggleButton.addEventListener('click', toggleButtonIcon);
 // Filter Buttons 
