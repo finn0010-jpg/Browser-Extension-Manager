@@ -207,8 +207,21 @@ h1 {
 }
 
 .remove-button:hover {
-    scale: 1.1;
     transition: 0.3s ease;
+}
+
+.remove-button.dark-button:hover {
+    color: var(--neutral-900);
+    background-color: var(--red-400);
+}
+
+.toggle-theme.dark-button {
+    background-color: var(--neutral-800);
+}
+
+.toggle-theme.dark-button:hover {
+    background-color: var(--neutral-600);
+    transition: 0.4s ease;
 }
 
 /* Slider Toggle Switch */
@@ -298,6 +311,19 @@ input:checked + .slider::before {
         align-items: flex-start;
         width: 1168px;
         justify-content: space-between;
+    }
+
+    .remove-button:hover {
+        background-color: var(--red-700);
+        color: var(--neutral-0);
+    }
+
+    .slider:hover {
+        background-color: var(--red-500);
+    }
+
+    .toggle-theme:hover {
+        background-color: var(--neutral-300);
     }
 
 }
